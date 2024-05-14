@@ -55,6 +55,7 @@
 
                         <li class='sub-menu'><a>Setup Mobile Application<i class='fa fa-caret-down right'></i></a>
                             <ul>
+                                <li><a href="#impNote">Important Note</a></li>
                                 <li><a href='#setupFlutter'>Setup Flutter</a></li>
                                 <li><a href='#changePackageName'>Change Package Name Of Application</a></li>
                                 <li><a href='#integrateWithFirebase'>Integrate with Firebase</a></li>
@@ -64,12 +65,16 @@
                                 <li><a href='#runThisApp'>Run This App</a></li>
                                 <li><a href='#changeAppTheme'>Change App theme</a></li>
                                 <li><a href='#changeFont'>Change Font</a></li>
-                                <li><a href='#changeLanguage'>Change Language</a></li>
+                                <li><a href='#changeLanguageStudentParent'>Change Language Student-Parent App</a></li>
+                                <li><a href='#changeLanguageStaffTeacher'>Change Language Staff-Teacher App</a></li>
                                 <li><a href='#changeItemAnimations'>Change Item Animations</a></li>
                                 <li><a href='#generateReleaseVersion'>Generate Release Version</a></li>
                             </ul>
                         </li>
-
+                        <li>
+                            <a href="#scopeStaffTeacherApp">Scope of Staff Teacher App <span
+                                    class="fa fa-arrow-right"></span></a>
+                        </li>
                         <li>
                             <a href="#support">Support <span class="fa fa-arrow-right"></span></a>
                         </li>
@@ -235,9 +240,33 @@
                 </div>
             </section>
 
+            <!-- Setup flutter  -->
+            <section class="section css-structure" id="impNote">
 
+                <br />
+                <div class="sec-title">
+                    <span class="icon fa fa-info-circle"></span>
+                    <h2>Important note</h2>
+                </div>
+                <br />
+                <div class="sec-content">
+                    <ul>
+                        <li>The steps for using the <code>Student-Parent App</code> and
+                            <code>Staff-Teacher App</code> are mostly the same, except for managing the
+                            language option, which requires following different steps in each app.
+                        </li>
+                        <li>While using either the <code>Student-Parent App</code> and
+                            <code>Staff-Teacher App</code>, keep in mind that the process for managing the
+                            language option is unique to each app and requires separate steps to be followed accurately.
+                        </li>
+                    </ul>
+                    <br />
+                </div>
+            </section>
             <!-- Setup flutter  -->
             <section class="section css-structure" id="setupFlutter">
+
+                <br />
                 <div class="sec-title">
                     <span class="icon fa fa-at"></span>
                     <h2>Setup flutter</h2>
@@ -551,10 +580,10 @@
             </section>
 
 
-            <section class="section css-structure" id="changeLanguage">
+            <section class="section css-structure" id="changeLanguageStudentParent">
                 <div class="sec-title">
                     <span class="icon fa fa-at"></span>
-                    <h2>Change language in app</h2>
+                    <h2>Change language in Student-Parent app</h2>
                 </div>
                 <br>
                 <div class="sec-content">
@@ -595,6 +624,65 @@
                                 Copy all the labels form en.json file in your [language-code].json file.</h4>
                             <br><br>
                             <img src="images/app/addNewLanguage2.jpg" alt="e-School Saas" />
+                            <br><br>
+                        </li>
+                        <li>
+                            <h4>
+                                If you want to add new language then follow the steps 2,3 and 4.</h4>
+                        </li>
+                    </ol>
+                </div>
+
+
+
+            </section>
+
+
+            <section class="section css-structure" id="changeLanguageStaffTeacher">
+                <div class="sec-title">
+                    <span class="icon fa fa-at"></span>
+                    <h2>Change language in Staff-Teacher app</h2>
+                </div>
+                <br>
+                <div class="sec-content">
+                    <ol>
+                        <li>
+                            <h4>By default,default applicaiton language is english. If you want to change default
+                                language
+                                go to lib/utils/appLanguages.dart and add your respective language's code shown in below
+                                image.
+                                Get your language code from here
+                                <a href="https://developers.google.com/admin-sdk/directory/v1/languages"
+                                    target="_blank">https://developers.google.com/admin-sdk/directory/v1/languages</a>.
+                            </h4>
+                            <br><br>
+                            <img src="images/app/changeDefaultLanguage.png" alt="e-School Saas" />
+                            <br><br>
+                        </li>
+                        <li>
+                            <h4>
+                                If your default language code is not in app language list add language details
+                                in list as shown in below image. Go to lib/utils/appLanguages.dart</h4>
+                            <br><br>
+                            <img src="images/app/addLanguage.png" alt="e-School Saas" />
+                            <br><br>
+                        </li>
+                        <li>
+                            <h4>
+                                If your default language is not added into translationsKeys in the
+                                lib/app/appTranslation.dart then add language
+                                code as shown in image.</h4>
+                            <br><br>
+                            <img src="images/app/staff-teacher-add-language.png" alt="e-School Saas" />
+                            <br><br>
+                        </li>
+                        <li>
+                            <h4>
+                                Create new variable Map<String,String> newLanguageCode = {}.
+                                    Copy all the labels form en variable and assigned translation in newLanguageCode
+                                    variable.</h4>
+                            <br><br>
+                            <img src="images/app/staff-teacher-add-language-2.png" alt="e-School Saas" />
                             <br><br>
                         </li>
                         <li>
@@ -699,6 +787,16 @@
                         </li>
                     </ol>
                 </div>
+            </section>
+
+
+            <!-- Scope of Staff Teacher App  -->
+            <section class="section scopeStaffTeacherApp" id="scopeStaffTeacherApp">
+                <div class="sec-title">
+                    <span class="icon fa fa-support"></span>
+                    <h2>Scope of Staff Teacher App</h2>
+                </div>
+
             </section>
 
 

@@ -544,13 +544,15 @@ p {
     /* Add some space between the title and button */
     display: inline-block;
 }
-.container-img{
+
+.container-img {
     position: relative;
     overflow: hidden;
     width: 100%;
     padding-top: 56.25%;
 }
-.responsive-img{
+
+.responsive-img {
     position: absolute;
     top: 0;
     left: 0;
@@ -558,5 +560,35 @@ p {
     right: 0;
     width: 100%;
     height: 100%;
-   
+
+}
+
+/* Reset default list styles */
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+/* Style list items */
+li {
+    padding-left: 20px;
+    /* Adjust the padding to create space for markers */
+    margin-bottom: 5px;
+    position: relative;
+    /* Position relative for absolute positioning of markers */
+}
+
+/* Main list styles */
+.main-list>li {
+    list-style-type: disc;
+    /* Main list items use disc markers */
+}
+
+/* Sub-list styles */
+.sub-list>li {
+    list-style-type: circle;
+    /* Sub-list items use circle markers */
+    margin-top: 5px;
+    /* Adjust spacing between sub-list items */
 }

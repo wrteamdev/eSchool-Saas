@@ -866,6 +866,70 @@
                     </h3>
                     <br>
                 </div>
+                <hr>
+                <div class="sec-content">
+                    <h2><b>Setup websocket using terminal</b></h2>
+                    <br>
+                    <p>Open the Terminal from an SSH Connection.</p>
+                    <code>
+                        sudo apt-get update
+                        <br>
+                        sudo apt-get install supervisor
+                        <br>
+                        sudo nano /etc/supervisor/conf.d/your-laravel-websockets.conf
+                    </code>
+                    <br>
+                    <hr>
+                    <code>
+                        [program:laravel-websockets]
+                        <br>
+                        process_name=%(program_name)s_%(process_num)02d
+                        <br>
+                        command=php /path/to/your/laravel/artisan websocket:init
+                        <br>
+                        autostart=true
+                        <br>
+                        autorestart=true
+                        <br>
+                        user=username
+                        <br>
+                        numprocs=1
+                        <br>
+                        redirect_stderr=true
+                        <br>
+                        stdout_logfile=/path/to/your/laravel/storage/logs/laravel-websockets.log
+                    </code>
+                    <br>
+                    <hr>
+                    <code>
+                        sudo supervisorctl reread
+                        <br>
+                        sudo supervisorctl update
+                    </code>
+                    <br>
+                    <hr>
+                    <code>
+                        sudo supervisorctl start laravel-websockets
+                    </code>
+                    <br><hr>
+                    <code>
+                        sudo supervisorctl status
+                    </code>
+                    <br>
+                    <b>You should see something like:</b>
+                    <br>
+                    <code>
+                        laravel-websockets   RUNNING   pid 12345, uptime 0:03:21
+                    </code>
+                    <br>
+                    <br>
+                    <b>Your Socket URL</b>
+                    <h3>
+                        <strong>ws://YOUR-SERVER-IP:8090</strong>
+                        
+                    </h3>
+                    <br>
+                </div>
 
             </section>
 
